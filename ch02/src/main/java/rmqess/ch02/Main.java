@@ -12,9 +12,9 @@ public class Main
     public static void main(final String[] args) throws Exception
     {
         final ConnectionFactory factory = new ConnectionFactory();
-        factory.setUsername("ccm-dev");
-        factory.setPassword("coney123");
-        factory.setVirtualHost("ccm-dev-vhost");
+        factory.setUsername("dev");
+        factory.setPassword("test");
+        factory.setVirtualHost("dev_vhost");
         factory.setHost("localhost");
         factory.setPort(5672);
 
