@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "$content_type": "application/vnd.ccm.login.res.v1+json",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "success": {
+            "type":"boolean",
+            "required": true
+        },
+        "authentication_token": {
+            "type":"string",
+            "required": true
+        }
+    }
+}

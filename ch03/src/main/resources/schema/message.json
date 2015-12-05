@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "$content_type": "application/vnd.ccm.pmsg.v1+json",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "time_sent": {
+            "type":"string",
+            "format":"utc-millisec"
+        },
+        "sender_id": {
+            "type": "integer",
+            "required": true
+        },
+        "addressee_id": {
+            "type": "integer",
+            "optional": true
+        },
+        "topic": {
+            "type": "string",
+            "optional": true
+        },
+        "subject": {
+            "type": "string",
+            "required": true
+        },
+        "content": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

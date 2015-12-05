@@ -1,0 +1,9 @@
+#!/bin/bash
+
+queues_to_purge=`rabbitmqctl list_queues -p ccm-dev-vhost name messages_ready consumers | grep "user-inbox\.[[:digit:]]\+[[:space:]]\+[1-9][[:digit:]]*[[:space:]]\+0" | awk '{ print $1}'`
+
+for queue in $queues_to_purge ; do
+    echo -n "Purging $queue ... "
+    rabbitmqadmin -V ccm-dev-vhost -u ccm-admin -p hare123 purge queue name=$queue
+done
+
